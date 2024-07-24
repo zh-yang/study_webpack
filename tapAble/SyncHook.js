@@ -28,6 +28,7 @@ function COMPILE(options) {
 
 function SyncHook(args = [], name) {
     const hook = new Hook(args, name);
+    
     hook.constructor = SyncHook;
     hook.tapAsync = TAP_ASYNC;
     hook.tapPromise = TAP_PROMISE;
